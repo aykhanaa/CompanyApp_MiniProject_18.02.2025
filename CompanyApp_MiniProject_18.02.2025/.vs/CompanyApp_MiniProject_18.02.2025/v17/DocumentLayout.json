@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|solutionrelative:companyapp_miniproject_18.02.2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Program.cs",
+              "RelativeDocumentMoniker": "CompanyApp_MiniProject_18.02.2025\\Program.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Program.cs",
+              "RelativeToolTip": "CompanyApp_MiniProject_18.02.2025\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T05:46:22.304Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
