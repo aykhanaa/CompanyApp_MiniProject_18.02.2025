@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|solutionrelative:companyapp_miniproject_18.02.2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2BEFAA3-3554-4001-A41E-DED05C5FE086}|Repository\\Repository.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2BEFAA3-3554-4001-A41E-DED05C5FE086}|Repository\\Repository.csproj|solutionrelative:repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4762FDC6-CC05-463E-A2DB-29043F222732}|Domain\\Domain.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\domain\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4762FDC6-CC05-463E-A2DB-29043F222732}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4762FDC6-CC05-463E-A2DB-29043F222732}|Domain\\Domain.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4762FDC6-CC05-463E-A2DB-29043F222732}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4762FDC6-CC05-463E-A2DB-29043F222732}|Domain\\Domain.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4762FDC6-CC05-463E-A2DB-29043F222732}|Domain\\Domain.csproj|solutionrelative:domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2BEFAA3-3554-4001-A41E-DED05C5FE086}|Repository\\Repository.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\repository\\repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D2BEFAA3-3554-4001-A41E-DED05C5FE086}|Repository\\Repository.csproj|solutionrelative:repository\\repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +30,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Repository",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Repository\\Repository.csproj",
+              "RelativeDocumentMoniker": "Repository\\Repository.csproj",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Repository\\Repository.csproj",
+              "RelativeToolTip": "Repository\\Repository.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-18T06:36:54.778Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -23,14 +52,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Program.cs",
-              "RelativeDocumentMoniker": "CompanyApp_MiniProject_18.02.2025\\Program.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Program.cs",
-              "RelativeToolTip": "CompanyApp_MiniProject_18.02.2025\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Repository\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Repository\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Repository\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Repository\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T05:46:22.304Z",
+              "WhenOpened": "2025-02-18T06:33:46.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Domain\\Entities\\Employee.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Employee.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Domain\\Entities\\Employee.cs",
+              "RelativeToolTip": "Domain\\Entities\\Employee.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAcwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:24:35.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Domain\\Entities\\Department.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Department.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Domain\\Entities\\Department.cs",
+              "RelativeToolTip": "Domain\\Entities\\Department.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:24:05.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Domain\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Domain\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "Domain\\Common\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:13:44.545Z",
               "EditorCaption": ""
             }
           ]
