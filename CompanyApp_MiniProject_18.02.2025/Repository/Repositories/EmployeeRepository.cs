@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    internal class EmployeeRepository : BaseRepository<Employee>,IEmployeeRepository
+    public class EmployeeRepository : BaseRepository<Employee>,IEmployeeRepository
     {
     }
 }

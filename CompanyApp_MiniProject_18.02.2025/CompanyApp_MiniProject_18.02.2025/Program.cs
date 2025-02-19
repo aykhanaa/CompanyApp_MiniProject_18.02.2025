@@ -2,12 +2,14 @@
 using CompanyApp_MiniProject_18._02._2025.Controllers;
 
 DepartmentController departmentController = new DepartmentController();
+EmployeeController employeeController = new EmployeeController();  
 
 
 
 while (true)
 {
-    Console.WriteLine("Department.GetAll-1, Department.Create-2, Department.Delete-3, Department.GetByIdAsync-4, Department.Update-5,Department.Search-6");
+    Console.WriteLine("1- Department.Create,  2- Department.GetAll,  3- Department.Delete,  4- Department.GetByIdAsync,  5- Department.Update,  6- Department.Search" +
+                      ",  7-Employee.GetAll,  8-Employee.Create,   9-Employee.Delete,  10-Emplyee.GetById, 11-SearchEmpByNameOrSurname "); 
 x: string optionStr = Console.ReadLine();
 
     bool isCorrectOption = int.TryParse(optionStr, out int option);
@@ -16,10 +18,10 @@ x: string optionStr = Console.ReadLine();
         switch (option)
         {
             case 1:
-                await departmentController.GetAllAsync();
+                await departmentController.CreateAsync();
                 break;
             case 2:
-                await departmentController.CreateAsync();
+                await departmentController.GetAllAsync();
                 break;
             case 3:
                 await departmentController.DeleteAsync();
@@ -33,21 +35,21 @@ x: string optionStr = Console.ReadLine();
             case 6:
                 await departmentController.SearchAsync();
                 break;
-            //case 7:
-            //    await countrycontroller.GetCountriesByPopulation();
-            //    break;
-            //case 8:
-            //    await countrycontroller.GetByPopulation();
-            //    break;
-            //case 9:
-            //    await countrycontroller.GetAllWithSortingAsync();
-            //    break;
-            //case 10:
-            //    await categorycontroller.GetAllAsync();
-            //    break;
-            //case 11:
-            //    await categorycontroller.CreateAsync();
-            //    break;
+            case 7:
+                await employeeController.GetAllAsync();
+                break;
+            case 8:
+                await employeeController.CreateAsync();
+                break;
+            case 9:
+                await employeeController.DeleteAsync();
+                break;
+            case 10:
+                await employeeController.GetByIdAsync();
+                break;
+            case 11:
+                await employeeController.SearchEmpByNameOrSurnameAsync();
+                break;
             //case 12:
             //    await categorycontroller.DeleteAsync();
             //    break;

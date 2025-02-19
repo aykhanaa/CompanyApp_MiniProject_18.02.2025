@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories.Interfaces
 {
-    internal interface IEmployeeRepository : IBaseRepository<Employee>
+    public interface IEmployeeRepository : IBaseRepository<Employee>
     {
+
     }
 }
