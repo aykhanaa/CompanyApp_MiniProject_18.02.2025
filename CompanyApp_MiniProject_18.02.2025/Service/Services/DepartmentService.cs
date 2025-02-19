@@ -32,7 +32,7 @@ namespace Service.Services
 
         public async Task DeleteAsync(int id)
         {
-            if (id == null) throw new ArgumentNullException(ResponseMessages.DataNotFound);
+            if (id == null) throw new NotFoundException(ResponseMessages.DataNotFound);
             var department = await _departmentRepo.GetByIdAsync(id);
             if (department == null) throw new NotFoundException(ResponseMessages.DataNotFound);
             await _departmentRepo.DeleteAsync(department);
@@ -47,20 +47,15 @@ namespace Service.Services
         public async Task<IEnumerable<Department>> GetAllWithConditionAsync(Expression<Func<Department, bool>> predicate)
         {
             var result = await _departmentRepo.GetAllWithConditionAsync(predicate);
-            if (result is null)
-            {
-                Console.WriteLine(ResponseMessages.DataNotFound);
-            }
+            if (result is null) throw new NotFoundException(ResponseMessages.DataNotFound);
             return result;
         }
 
         public async Task<Department> GetByIdAsync(int id)
         {
             var result = await _departmentRepo.GetByIdAsync(id);
-            if (result is null)
-            {
-                Console.WriteLine(ResponseMessages.DataNotFound);
-            }
+            if (result is null) throw new NotFoundException(ResponseMessages.DataNotFound);
+
             return result;
         }
 
