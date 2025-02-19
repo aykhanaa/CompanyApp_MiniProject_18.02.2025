@@ -44,7 +44,40 @@ namespace Service.Services
             return await _departmentRepo.GetAllAsync();
         }
 
-        
+        public async Task<IEnumerable<Department>> GetAllWithConditionAsync(Expression<Func<Department, bool>> predicate)
+        {
+            var result = await _departmentRepo.GetAllWithConditionAsync(predicate);
+            if (result is null)
+            {
+                Console.WriteLine(ResponseMessages.DataNotFound);
+            }
+            return result;
+        }
+
+        public async Task<Department> GetByIdAsync(int id)
+        {
+            var result = await _departmentRepo.GetByIdAsync(id);
+            if (result is null)
+            {
+                Console.WriteLine(ResponseMessages.DataNotFound);
+            }
+            return result;
+        }
+
+        public async Task UpdateAsync(int id, Department department)
+        {
+            var existDepartment = await _departmentRepo.GetByIdAsync(id);
+            if (!string.IsNullOrWhiteSpace(department.Name))
+            {
+                existDepartment.Name = department.Name;
+            }
+            if (department.Capacity > 0)
+            {
+                existDepartment.Capacity = department.Capacity;
+            }
+            await _departmentRepo.UpdateAsync(existDepartment);
+        }
+
     }
 }
 

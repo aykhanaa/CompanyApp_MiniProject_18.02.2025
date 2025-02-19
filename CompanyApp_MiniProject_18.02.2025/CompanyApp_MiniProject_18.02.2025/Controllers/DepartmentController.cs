@@ -125,7 +125,140 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             }
 
         }
-       
+        public async Task GetByIdAsync()
+        {
+            var allDepartment = await _departmentService.GetAllAsync();
+        Id: Console.WriteLine("Add country id:");
+            string idstr = Console.ReadLine();
+            int id;
+            if (!int.TryParse(idstr, out id))
+            {
+                Console.WriteLine(ValidationMessages.OnlyNumberFormat);
+                goto Id;
+            }
+            if (id < 1)
+            {
+                Console.WriteLine("Id cannot be less than 1");
+                goto Id;
+            }
+
+            if (allDepartment.All(m => m.Id != id))
+            {
+                Console.WriteLine(ResponseMessages.DataNotFound);
+                goto Id;
+            }
+            try
+            {
+                var result = await _departmentService.GetByIdAsync(id);
+
+                Console.WriteLine($"Id:{result.Id},Name:{result.Name},Capacity:{result.Capacity},CreatedDate:{result.CreatedDate.ToString("MM/dd/yyyy")}");
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+
+
+
+
+        }
+        public async Task UpdateAsync()
+        {
+            var allDepartment = await _departmentService.GetAllAsync();
+        Id: Console.WriteLine("Enter id of the education you want to update:");
+
+            string idStr = Console.ReadLine();
+
+            if (string.IsNullOrWhiteSpace(idStr))
+            {
+                goto Id;
+            }
+
+            int id;
+
+            if (!int.TryParse(idStr, out id))
+            {
+                Console.WriteLine(ResponseMessages.InvalidIdFormat);
+                goto Id;
+            }
+
+            if (id < 1)
+            {
+                Console.WriteLine("Id cannot be less than 1.");
+                goto Id;
+            }
+
+            if (allDepartment.All(m => m.Id != id))
+            {
+                Console.WriteLine(ResponseMessages.DataNotFound);
+                goto Id;
+            }
+            Console.WriteLine("Enter name :");
+        UpdatedName: string updatedName = Console.ReadLine().Trim();
+
+            if (allDepartment.Any(m => m.Name.ToLower() == updatedName.ToLower()))
+            {
+                Console.WriteLine("Education with this name already exists");
+                goto UpdatedName;
+            }
+
+            Console.WriteLine("Enter capacity :");
+        Capacity: string updatedCapacityStr = Console.ReadLine();
+
+            int updatedCapacity = 0;
+
+            if (!string.IsNullOrWhiteSpace(updatedCapacityStr))
+            {
+                if (!int.TryParse(updatedCapacityStr, out updatedCapacity))
+                {
+                    Console.WriteLine(ResponseMessages.InvalidCapacityFormat);
+                    goto Capacity;
+                }
+
+                if (updatedCapacity < 1)
+                {
+                    Console.WriteLine(ResponseMessages.InvalidCapacityFormat);
+                }
+            }
+            try
+            {
+                await _departmentService.UpdateAsync(id, new Department { Name = updatedName, Capacity = updatedCapacity });
+
+                Console.WriteLine(ResponseMessages.UpdateSuccess);
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+        public async Task SearchAsync()
+        {
+            Console.WriteLine("Add search text");
+            string serachText = Console.ReadLine();
+            try
+            {
+                var result = await _departmentService.GetAllWithConditionAsync(x => x.Name.Contains(serachText));
+
+                foreach (var item in result)
+                {
+                    Console.WriteLine($"Id:{item.Id},Name:{item.Name},Capacity:{item.Capacity},CreatedDate:{item.CreatedDate.ToString("MM/dd/yyyy")}");
+                }
+                if (result == null || !result.Any())
+                {
+                    Console.WriteLine(ResponseMessages.DataNotFound);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
     }
 
 

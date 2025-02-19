@@ -2,7 +2,7 @@
 using CompanyApp_MiniProject_18._02._2025.Controllers;
 
 DepartmentController departmentController = new DepartmentController();
-EmployeeController employeeController = new EmployeeController();  
+//EmployeeController employeeController = new EmployeeController();  
 
 
 
@@ -35,21 +35,24 @@ x: string optionStr = Console.ReadLine();
             case 6:
                 await departmentController.SearchAsync();
                 break;
-            case 7:
-                await employeeController.GetAllAsync();
-                break;
-            case 8:
-                await employeeController.CreateAsync();
-                break;
-            case 9:
-                await employeeController.DeleteAsync();
-                break;
-            case 10:
-                await employeeController.GetByIdAsync();
-                break;
-            case 11:
-                await employeeController.SearchEmpByNameOrSurnameAsync();
-                break;
+            //case 7:
+            //    await employeeController.GetAllAsync();
+            //    break;
+            //case 8:
+            //    await employeeController.CreateAsync();
+            //    break;
+            //case 9:
+            //    await employeeController.DeleteAsync();
+            //    break;
+            //case 10:
+            //    await employeeController.GetByIdAsync();
+            //    break;
+            //case 11:
+            //    await employeeController.SearchEmpByNameOrSurnameAsync();
+            //    break;
+
+
+
             //case 12:
             //    await categorycontroller.DeleteAsync();
             //    break;
