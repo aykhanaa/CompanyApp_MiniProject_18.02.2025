@@ -18,6 +18,8 @@ namespace Service.Services.Interfaces
         Task<IEnumerable<Employee>> GetAllWithConditionAsync(Expression<Func<Employee, bool>> predicate);
         Task<List<Employee>> GetEmplByAgeAsync(int age);
         Task<List<Employee>> GetEmplByDepIdAsync(int departmentId);
+        Task<List<Employee>> GetAllEmplByDepNameAsync(string name);
+        Task<int> GetAllEmplCountAsync();
 
     }
 }

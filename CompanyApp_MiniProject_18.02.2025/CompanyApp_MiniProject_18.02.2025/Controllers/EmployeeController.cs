@@ -419,6 +419,35 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             }
 
         }
+        public async Task GetAllEmplByDepNameAsync()
+        {
+        Name: Console.WriteLine("Add department name");
+            string depName = Console.ReadLine();
+            if (!depName.CheckNameFormat())
+            {
+                Console.WriteLine(ResponseMessages.InvalidNameFormat);
+                goto Name;
+            }
+            try
+            {
+                var result = await _employeeService.GetAllEmplByDepNameAsync(depName);
+                foreach (var item in result)
+                {
+                    Console.WriteLine($"Name & Surname:{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+        }
+        public async Task GetAllEmplCountAsync()
+        {
+
+            var emplCount = await _employeeService.GetAllEmplCountAsync();
+            Console.WriteLine("All employees count:" + emplCount);
+        }
 
     }
 }

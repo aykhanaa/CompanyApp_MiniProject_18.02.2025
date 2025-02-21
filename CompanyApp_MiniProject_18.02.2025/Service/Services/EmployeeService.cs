@@ -98,5 +98,18 @@ namespace Service.Services
             if (emplId.Count == 0) throw new Exception(ResponseMessages.DataNotFound);
             return emplId;
         }
+        public async Task<List<Employee>> GetAllEmplByDepNameAsync(string name)
+        {
+            var empName = await _employeeRepo.GetAllEmployeesByDepNameAsync(name);
+            if (empName.Count == 0) throw new Exception(ResponseMessages.DataNotFound);
+            return empName;
+        }
+
+        public async Task<int> GetAllEmplCountAsync()
+        {
+            var empCount = await _employeeRepo.GetAllEmployeesCountAsync();
+            return empCount;
+        }
+
     }
 }

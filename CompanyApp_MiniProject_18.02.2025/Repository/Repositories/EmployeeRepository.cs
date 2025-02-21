@@ -23,5 +23,16 @@ namespace Repository.Repositories
         {
             return await _context.Set<Employee>().Where(m => m.DepartmentId == departmentId).ToListAsync();
         }
+        public async Task<List<Employee>> GetAllEmployeesByDepNameAsync(string depName)
+        {
+            return await _context.Set<Employee>().Include(m => m.Department)
+                 .Where(m => m.Department.Name.ToLower() == depName.ToLower()).ToListAsync();
+        }
+
+        public async Task<int> GetAllEmployeesCountAsync()
+        {
+            return await _context.Employees.CountAsync();
+        }
+        
     }
 }
