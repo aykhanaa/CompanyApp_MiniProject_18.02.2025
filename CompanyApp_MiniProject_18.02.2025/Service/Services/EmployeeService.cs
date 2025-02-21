@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Azure;
+using Domain.Entities;
 using Repository.Repositories;
 using Repository.Repositories.Interfaces;
 using Service.Helpers.Constants;
@@ -44,10 +45,47 @@ namespace Service.Services
         {
             var result = await _employeeRepo.GetByIdAsync(id);
             if (result is null) throw new NotFoundException(ResponseMessages.DataNotFound);
-
             return result;
         }
 
-       
+        public async Task<IEnumerable<Employee>> GetAllWithConditionAsync(Expression<Func<Employee, bool>> predicate)
+        {
+            var result = await _employeeRepo.GetAllWithConditionAsync(predicate);
+            if (!result.Any()) throw new NotFoundException(ResponseMessages.DataNotFound);
+            return result;
+        }
+
+        public async Task UpdateAsync(int id, Employee employee)
+        {
+            var existEmployee = await _employeeRepo.GetByIdAsync(id);
+
+            if (!string.IsNullOrWhiteSpace(employee.Name))
+            {
+                existEmployee.Name = employee.Name;
+            }
+
+            if (!string.IsNullOrWhiteSpace(employee.Surname))
+            {
+                existEmployee.Surname = employee.Surname;
+            }
+
+            if (employee.Age > 0)
+            {
+                existEmployee.Age = employee.Age;
+            }
+
+            if (!string.IsNullOrWhiteSpace(employee.Address))
+            {
+                existEmployee.Address = employee.Address;
+            }
+            if (employee.DepartmentId > 0)
+            {
+                existEmployee.DepartmentId = employee.DepartmentId;
+            }
+
+            await _employeeRepo.UpdateAsync(existEmployee);
+        }
+
+
     }
 }

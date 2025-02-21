@@ -41,7 +41,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                     goto Name;
                 }
 
-                if (!name.CheckCategoryNameFormat())
+                if (!name.CheckStrFormat())
                 {
                     Console.WriteLine(ResponseMessages.InvalidNameFormat);
                     goto Name;
@@ -129,7 +129,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
         public async Task GetByIdAsync()
         {
             var allDepartment = await _departmentService.GetAllAsync();
-        Id: Console.WriteLine("Add country id:");
+        Id: Console.WriteLine("Add departament id:");
             string idstr = Console.ReadLine();
             int id;
             if (!int.TryParse(idstr, out id))
@@ -167,7 +167,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
         public async Task UpdateAsync()
         {
             var allDepartment = await _departmentService.GetAllAsync();
-        Id: Console.WriteLine("Enter id of the education you want to update:");
+        Id: Console.WriteLine("Enter id of the departament you want to update:");
 
             string idStr = Console.ReadLine();
 
@@ -200,7 +200,12 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
             if (allDepartment.Any(m => m.Name.ToLower() == updatedName.ToLower()))
             {
-                Console.WriteLine("Education with this name already exists");
+                Console.WriteLine("Departament with this name already exists");
+                goto UpdatedName;
+            }
+            if (!updatedName.CheckNameFormatAllowSpace())
+            {
+                Console.WriteLine(ResponseMessages.InvalidNameFormat);
                 goto UpdatedName;
             }
 
@@ -237,25 +242,23 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
         }
         public async Task SearchAsync()
         {
-            Console.WriteLine("Add search text");
+            Capacity: Console.WriteLine("Add search text");
             string serachText = Console.ReadLine();
             try
             {
-                var result = await _departmentService.GetAllWithConditionAsync(x => x.Name.Contains(serachText));
+                var result = await _departmentService.GetAllWithConditionAsync(x => x.Name.Trim().ToLower().Contains(serachText.Trim().ToLower()));
 
                 foreach (var item in result)
                 {
                     Console.WriteLine($"Id:{item.Id},Name:{item.Name},Capacity:{item.Capacity},CreatedDate:{item.CreatedDate.ToString("MM/dd/yyyy")}");
                 }
-                if (result == null || !result.Any())
-                {
-                    Console.WriteLine(ResponseMessages.DataNotFound);
-                }
+
             }
             catch (Exception ex)
             {
 
                 Console.WriteLine(ex.Message);
+                goto Capacity;
             }
 
         }

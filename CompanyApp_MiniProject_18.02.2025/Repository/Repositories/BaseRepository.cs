@@ -14,7 +14,7 @@ namespace Repository.Repositories
     public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         protected readonly AppDbContext _context;
-        private DbSet<T> _dbSet;
+        protected DbSet<T> _dbSet;
 
         public BaseRepository()
         {
@@ -41,7 +41,7 @@ namespace Repository.Repositories
 
         public async Task<IEnumerable<T>> GetAllWithConditionAsync(Expression<Func<T, bool>> predicate)
         {
-           return await _dbSet.Where(predicate).ToListAsync();
+           return await _context.Set<T>().Where(predicate).ToListAsync();
         }
 
         public async Task<T> GetByIdAsync(int id)

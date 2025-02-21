@@ -9,7 +9,8 @@ EmployeeController employeeController = new EmployeeController();
 while (true)
 {
     Console.WriteLine("1- Department.Create,  2- Department.GetAll,  3- Department.Delete,  4- Department.GetByIdAsync,  5- Department.Update,  6- Department.Search" +
-                      ",  7-Employee.GetAll,  8-Employee.Create,   9-Employee.Delete,  10-Emplyee.GetById, 11-SearchEmpByNameOrSurname "); 
+                      ",  7-Employee.GetAll,  8-Employee.Create,   9-Employee.Delete,  10-Emplyee.GetById, 11-SearchEmpByNameOrSurname, 12-Employee.Update " +
+                      "13-Employee.GetEmplByAgeAsync , 14- Employee.GetEmplByDepIdAsync , 15- Employee.GetAllEmplByDepNameAsync , 16- Employee.GetAllEmplCountAsync"); 
 x: string optionStr = Console.ReadLine();
 
     bool isCorrectOption = int.TryParse(optionStr, out int option);
@@ -50,42 +51,24 @@ x: string optionStr = Console.ReadLine();
             case 11:
                 await employeeController.SearchEmpByNameOrSurnameAsync();
                 break;
+            case 12:
+                await employeeController.UpdateAsync();
+                break;
+            case 13:
+                await employeeController.GetEmplByAgeAsync();
+                break;
+            case 14:
+                await employeeController.GetEmplByDepIdAsync();
+                break;
+            case 15:
+                await employeeController.GetAllEmplByDepNameAsync();
+                break;
+            case 16:
+                await employeeController.GetAllEmplCountAsync();
+                break;
 
 
 
-            //case 12:
-            //    await categorycontroller.DeleteAsync();
-            //    break;
-            //case 24:
-            //    await doctorcontroller.GetAllAsync();
-            //    break;
-            //case 25:
-            //    await doctorcontroller.CreateAsync();
-            //    break;
-            //case 26:
-            //    await doctorcontroller.DeleteAsync();
-            //    break;
-            //case 27:
-            //    await doctorcontroller.GetByIdAsync();
-            //    break;
-            //case 28:
-            //    await doctorcontroller.UpdateAsync();
-            //    break;
-            //case 29:
-            //    await doctorcontroller.SearchAsync();
-            //    break;
-            //case 30:
-            //    await doctorcontroller.GetAllSortingAsync();
-            //    break;
-            //case 31:
-            //    await doctorcontroller.GetByAgeAsync();
-            //    break;
-            //case 32:
-            //    await doctorcontroller.GetDoctorsBySalaryAsync();
-            //    break;
-            //case 33:
-            //    await citycontroller.GetAllAsync();
-            //    break;
             default:
                 Console.WriteLine("Option wrong choose");
                 goto x;

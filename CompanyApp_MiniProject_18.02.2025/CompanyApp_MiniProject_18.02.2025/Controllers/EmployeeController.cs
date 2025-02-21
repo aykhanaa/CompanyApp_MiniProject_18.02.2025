@@ -1,12 +1,11 @@
 ﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore.Query;
 using Service.Helpers.Constants;
+using Service.Helpers.Extensions;
 using Service.Services;
 using Service.Services.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CompanyApp_MiniProject_18._02._2025.Controllers
 {
@@ -26,7 +25,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             var allEmployees = await _employeeService.GetAllAsync();
             foreach (var item in allEmployees)
             {
-                Console.WriteLine($"Id:{item.Id},Name:{item.Name},Surname:{item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId},CreatedDate:{item.CreatedDate.ToString("MM/dd/yyyy")}");
+                Console.WriteLine($"Id:{item.Id},Name & Surname:{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},CreatedDate:{item.CreatedDate.ToString("MM/dd/yyyy")},DepartmentId:{item.DepartmentId}");
             }
         }
         public async Task CreateAsync()
@@ -41,12 +40,22 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             {
                 goto Name;
             }
+            if (!name.CheckNameFormat())
+            {
+                Console.WriteLine(ResponseMessages.InvalidNameFormat);
+                goto Name;
+            }
 
         Surname: Console.WriteLine("Enter surname:");
             string surname = Console.ReadLine().Trim();
 
             if (string.IsNullOrEmpty(surname))
             {
+                goto Surname;
+            }
+            if (!surname.CheckNameFormat())
+            {
+                Console.WriteLine(ResponseMessages.InvalidNameFormat);
                 goto Surname;
             }
 
@@ -63,7 +72,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
             if (!int.TryParse(ageStr, out age))
             {
-                Console.WriteLine(ResponseMessages.InvalidCapacityFormat);
+                Console.WriteLine(ResponseMessages.IncorrectFormat);
                 goto Age;
             }
 
@@ -78,6 +87,11 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
             if (string.IsNullOrEmpty(address))
             {
+                goto Address;
+            }
+            if (!address.IsCorrectProductNameFormat())
+            {
+                Console.WriteLine(ResponseMessages.InvalidNameFormat);
                 goto Address;
             }
 
@@ -175,23 +189,187 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
         }
         public async Task GetByIdAsync()
         {
-            Console.WriteLine("Add employee id");
-            int employeeid = int.Parse(Console.ReadLine());
+            Id:  Console.WriteLine("Add employee id");
+            string employeeidStr = Console.ReadLine();
+            int employeeid;
+            if (!int.TryParse(employeeidStr, out employeeid))
+            {
+                Console.WriteLine(ResponseMessages.InvalidIdFormat);
+                goto Id;
+            }
 
             try
             {
                 var result = await _employeeService.GetByIdAsync(employeeid);
-                Console.WriteLine($"Id:{result.Id},Name:{result.Name},Surname:{result.Surname},Age:{result.Age},Address:{result.Address},DepartmentId:{result.DepartmentId},CreatedDate:{result.CreatedDate.ToString("MM/dd/yyyy")}");
+                Console.WriteLine($"Id:{result.Id},Name & Surname:{result.Name} {result.Surname},Age:{result.Age},Address:{result.Address},DepartmentId:{result.DepartmentId},CreatedDate:{result.CreatedDate.ToString("MM/dd/yyyy")}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                goto Id;
+            }
 
+        }
+        public async Task SearchEmpByNameOrSurnameAsync()
+        {
+
+            Search:  Console.WriteLine("Add search text");
+            string serachText = Console.ReadLine();
+            try
+            {
+                var result = await _employeeService.GetAllWithConditionAsync(x => x.Name.Trim().ToLower().Contains(serachText.Trim().ToLower()) || x.Surname.Trim().ToLower().Contains(serachText.Trim().ToLower()));
+
+                foreach (var item in result)
+                {
+                    Console.WriteLine($"Id:{item.Id},Name:{item.Name},Surname:{item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId},CreatedDate:{item.CreatedDate.ToString("MM/dd/yyyy")}");
+                }
             }
             catch (Exception ex)
             {
 
                 Console.WriteLine(ex.Message);
             }
+        }
+        public async Task UpdateAsync()
+        {
+            var allDepartment = await _departmentService.GetAllAsync();
+            var allEmployee = await _employeeService.GetAllAsync();
+
+            Id: Console.WriteLine("Enter id of the employee you want to update:");
+            string idStr = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(idStr))
+            {
+                goto Id;
+            }
+            int id;
+
+            if (!int.TryParse(idStr, out id))
+            {
+                Console.WriteLine(ResponseMessages.InvalidIdFormat);
+                goto Id;
+            }
+
+            if (allEmployee.All(m=>m.Id != id))
+            {
+                Console.WriteLine(ResponseMessages.DataNotFound);
+                goto Id;
+            }
+
+            if (id < 1)
+            {
+                Console.WriteLine("Id cannot be less than 1. Please try again:");
+                goto Id;
+            }
+
+            EditedName: Console.WriteLine("Add name");
+            string editedName = Console.ReadLine();
+
+            if (allEmployee.Any(m => m.Name.ToLower() == editedName.ToLower()))
+            {
+                Console.WriteLine("Employee name is already exists");
+                goto EditedName;
+            }
+            if (!editedName.CheckNameFormatAllowSpace())
+            {
+                Console.WriteLine(ResponseMessages.InvalidNameFormat);
+                goto EditedName;
+            }
+
+
+        EditedSurname: Console.WriteLine("Add surname");
+            string editedsurname = Console.ReadLine();
+
+            if (allEmployee.Any(m => m.Name.Trim().ToLower() == editedsurname.Trim().ToLower()))
+            {
+                Console.WriteLine("Employee surname is already exists");
+                goto EditedSurname;
+            }
+
+            if (!editedsurname.CheckNameFormatAllowSpace())
+            {
+                Console.WriteLine(ResponseMessages.InvalidNameFormat);
+                goto EditedName;
+            }
+
+
+        EditedAge: Console.WriteLine("Add age:");
+            string editedagestr = Console.ReadLine();
+            int editedage = 0;
+
+            if (!string.IsNullOrWhiteSpace(editedagestr))
+            {
+                if (!int.TryParse(editedagestr, out editedage))
+                {
+                    Console.WriteLine(ResponseMessages.InvalidAgeFormat);
+                    goto EditedAge;
+                }
+
+                if (!(editedage > 18 && editedage < 65))
+                {
+                    Console.WriteLine(ResponseMessages.InvalidAgeFormat);
+                    goto EditedAge;
+                }
+            }
+
+
+        EditedAddress: Console.WriteLine("Add address");
+            string editaddress = Console.ReadLine();
+
+            if (allEmployee.Any(m => m.Address.Trim().ToLower() == editaddress.Trim().ToLower()))
+            {
+                Console.WriteLine("Employee address is already exists");
+                goto EditedAddress;
+            }
+
+            if (!editaddress.CheckNameFormatAllowSpace())
+            {
+                Console.WriteLine(ResponseMessages.InvalidNameFormat);
+                goto EditedName;
+            }
+
+            Console.WriteLine("Department:");
+
+            DepartmentId: Console.WriteLine("Enter department id want to switch:");
+            string employeeIdStr = Console.ReadLine();
+
+            int editedDepartmentId = 0;
+
+            if (!string.IsNullOrWhiteSpace(employeeIdStr))
+            {
+                if (!int.TryParse(employeeIdStr, out editedDepartmentId))
+                {
+                    Console.WriteLine(ResponseMessages.InvalidIdFormat);
+                    goto DepartmentId;
+                }
+
+                if (editedDepartmentId < 1)
+                {
+                    Console.WriteLine("Id cannot be less than 1");
+                    goto DepartmentId;
+                }
+
+                if (allDepartment.All(m => m.Id != editedDepartmentId))
+                {
+                    Console.WriteLine("There is no education with specified id:");
+                    goto DepartmentId;
+                }
+            }
+
+            try
+            {
+                await _employeeService.UpdateAsync(id, new Employee { Name = editedName, Surname = editedsurname, Age = editedage, Address = editaddress, DepartmentId = editedDepartmentId });
+                Console.WriteLine(ResponseMessages.UpdateSuccess);
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+            
+
+
 
         }
-
 
     }
 }

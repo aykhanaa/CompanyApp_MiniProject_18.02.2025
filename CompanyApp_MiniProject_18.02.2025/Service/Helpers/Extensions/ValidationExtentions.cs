@@ -9,7 +9,7 @@ namespace Service.Helpers.Extensions
 {
     public  static class ValidationExtentions
     {
-        public static bool CheckCategoryNameFormat(this string name)
+        public static bool CheckNameFormat(this string name)
         {
             return Regex.IsMatch(name, @"^[\p{L}]+(?:\s[\p{L}]+)?$");
         }
@@ -23,6 +23,17 @@ namespace Service.Helpers.Extensions
         {
             return Regex.IsMatch(number, @"^\d+$");
         }
+
+        public static bool CheckNameFormatAllowSpace(this string name)
+        {
+            return Regex.IsMatch(name, @"^[\p{L}]+(?:\s+[\p{L}]+)*$");
+        }
+
+        public static bool CheckStrFormat(this string name)
+        {
+            return Regex.IsMatch(name, @"^[\p{L}]+(?:\s+[\p{L}]+)*$");
+        }
+
 
     }
 }

@@ -1,14 +1,13 @@
 ﻿using Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Repository.Repositories.Interfaces
 {
     public interface IEmployeeRepository : IBaseRepository<Employee>
     {
-
+        Task<List<Employee>> GetEmployeesByAgeAsync(int age);
+        Task<List<Employee>> GetEmployeesByDepIdAsync(int departmentId);
+        Task<List<Employee>> GetAllEmployeesByDepNameAsync(string name);
+        Task<int> GetAllEmployeesCountAsync();
     }
 }
