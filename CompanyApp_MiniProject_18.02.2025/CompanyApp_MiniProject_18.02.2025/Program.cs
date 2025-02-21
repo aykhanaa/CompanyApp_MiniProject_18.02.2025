@@ -60,12 +60,12 @@ x: string optionStr = Console.ReadLine();
             case 14:
                 await employeeController.GetEmplByDepIdAsync();
                 break;
-            case 15:
-                await employeeController.GetAllEmplByDepNameAsync();
-                break;
-            case 16:
-                await employeeController.GetAllEmplCountAsync();
-                break;
+            //case 15:
+            //    await employeeController.GetAllEmplByDepNameAsync();
+            //    break;
+            //case 16:
+            //    await employeeController.GetAllEmplCountAsync();
+            //    break;
 
 
 

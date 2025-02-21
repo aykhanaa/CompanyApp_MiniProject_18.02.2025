@@ -370,6 +370,55 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
 
         }
+        public async Task GetEmplByAgeAsync()
+        {
+        Age: Console.WriteLine("Enter age");
+            string ageStr = Console.ReadLine();
+            int age;
+            if (!int.TryParse(ageStr, out age))
+            {
+                Console.WriteLine(ResponseMessages.InvalidAgeFormat);
+                goto Age;
+            }
+            try
+            {
+                var empAge = await _employeeService.GetEmplByAgeAsync(age);
+                foreach (var item in empAge)
+                {
+                    Console.WriteLine($"Name & Surname::{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+        }
+        public async Task GetEmplByDepIdAsync()
+        {
+            Console.WriteLine("Add department id");
+            string depIdStr = Console.ReadLine();
+            int depId;
+
+            if (!int.TryParse(depIdStr, out depId))
+            {
+                Console.WriteLine(ResponseMessages.InvalidIdFormat);
+            }
+            try
+            {
+                var empId = await _employeeService.GetEmplByDepIdAsync(depId);
+                foreach (var item in empId)
+                {
+                    Console.WriteLine($"Name & Surname::{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+
+        }
 
     }
 }

@@ -86,6 +86,17 @@ namespace Service.Services
             await _employeeRepo.UpdateAsync(existEmployee);
         }
 
-
+        public async Task<List<Employee>> GetEmplByAgeAsync(int age)
+        {
+            var emplAge = await _employeeRepo.GetEmployeesByAgeAsync(age);
+            if (emplAge.Count == 0) throw new NotFoundException(ResponseMessages.DataNotFound);
+            return emplAge;
+        }
+        public async Task<List<Employee>> GetEmplByDepIdAsync(int departmentId)
+        {
+            var emplId = await _employeeRepo.GetEmployeesByDepIdAsync(departmentId);
+            if (emplId.Count == 0) throw new Exception(ResponseMessages.DataNotFound);
+            return emplId;
+        }
     }
 }
