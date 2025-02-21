@@ -47,7 +47,7 @@ namespace Service.Services
         public async Task<IEnumerable<Department>> GetAllWithConditionAsync(Expression<Func<Department, bool>> predicate)
         {
             var result = await _departmentRepo.GetAllWithConditionAsync(predicate);
-            //if (!result.Any()) throw new NotFoundException(ResponseMessages.DataNotFound);
+            if (!result.Any()) throw new NotFoundException(ResponseMessages.DataNotFound);
             return result;
         }
 
