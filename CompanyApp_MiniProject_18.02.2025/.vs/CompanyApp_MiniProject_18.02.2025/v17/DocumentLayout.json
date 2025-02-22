@@ -3,44 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|solutionrelative:companyapp_miniproject_18.02.2025\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|solutionrelative:companyapp_miniproject_18.02.2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|solutionrelative:companyapp_miniproject_18.02.2025\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|solutionrelative:service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\service\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|solutionrelative:service\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\service\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|solutionrelative:service\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|solutionrelative:companyapp_miniproject_18.02.2025\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCF0540B-0699-4960-9E85-241E858A4272}|CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025.csproj|solutionrelative:companyapp_miniproject_18.02.2025\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\service\\helpers\\constants\\responsemessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|solutionrelative:service\\helpers\\constants\\responsemessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|solutionrelative:service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\service\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\service\\services\\interfaces\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\service\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC7C6BAF-B21E-40CE-B8C6-BC71CD237D49}|Service\\Service.csproj|solutionrelative:service\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2BEFAA3-3554-4001-A41E-DED05C5FE086}|Repository\\Repository.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\repository\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2BEFAA3-3554-4001-A41E-DED05C5FE086}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2BEFAA3-3554-4001-A41E-DED05C5FE086}|Repository\\Repository.csproj|c:\\users\\hp\\desktop\\companyapp_miniproject_18.02.2025\\companyapp_miniproject_18.02.2025\\repository\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2BEFAA3-3554-4001-A41E-DED05C5FE086}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,110 +42,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Program.cs",
               "RelativeDocumentMoniker": "CompanyApp_MiniProject_18.02.2025\\Program.cs",
               "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Program.cs",
               "RelativeToolTip": "CompanyApp_MiniProject_18.02.2025\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAiAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T09:02:11.281Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DepartmentController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Controllers\\DepartmentController.cs",
-              "RelativeDocumentMoniker": "CompanyApp_MiniProject_18.02.2025\\Controllers\\DepartmentController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Controllers\\DepartmentController.cs",
-              "RelativeToolTip": "CompanyApp_MiniProject_18.02.2025\\Controllers\\DepartmentController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T08:42:46.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\UserService.cs",
-              "RelativeToolTip": "Service\\Services\\UserService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACAAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:40:41.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DepartmentService.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\DepartmentService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\DepartmentService.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\DepartmentService.cs",
-              "RelativeToolTip": "Service\\Services\\DepartmentService.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAADEAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T08:10:41.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "CompanyApp_MiniProject_18.02.2025\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Controllers\\UserController.cs",
-              "RelativeToolTip": "CompanyApp_MiniProject_18.02.2025\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAIA8wCQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T08:16:12.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "Service\\Services\\EmployeeService.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:41:16.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "Service\\Services\\Interfaces\\IUserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:40:01.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IDepartmentService.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\Interfaces\\IDepartmentService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IDepartmentService.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\Interfaces\\IDepartmentService.cs",
-              "RelativeToolTip": "Service\\Services\\Interfaces\\IDepartmentService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:39:21.932Z",
+              "WhenOpened": "2025-02-22T07:40:39.591Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -162,50 +64,87 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DepartmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Repository\\Repositories\\DepartmentRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\DepartmentRepository.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Repository\\Repositories\\DepartmentRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\DepartmentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "ResponseMessages.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Helpers\\Constants\\ResponseMessages.cs",
+              "RelativeDocumentMoniker": "Service\\Helpers\\Constants\\ResponseMessages.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Helpers\\Constants\\ResponseMessages.cs",
+              "RelativeToolTip": "Service\\Helpers\\Constants\\ResponseMessages.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:15:37.152Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "785aef24-bd14-4c77-81e2-5c087fd38b04",
-        "Display": 0,
-        "X": 276,
-        "Y": 230,
-        "Width": 1266,
-        "Height": 718,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
+              "WhenOpened": "2025-02-22T07:28:57.921Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "CompanyApp_MiniProject_18.02.2025\\Controllers\\EmployeeController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "CompanyApp_MiniProject_18.02.2025\\Controllers\\EmployeeController.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAAAFkAAAAdAAAA",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "CompanyApp_MiniProject_18.02.2025\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Controllers\\UserController.cs",
+              "RelativeToolTip": "CompanyApp_MiniProject_18.02.2025\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAcwI0AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T08:16:51.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T06:54:17.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Service\\Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T06:45:14.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\UserService.cs",
+              "RelativeToolTip": "Service\\Services\\UserService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAABrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T06:36:23.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Repository\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Repository\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\BaseRepository.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T18:44:05.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DepartmentService.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\DepartmentService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\DepartmentService.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Service\\Services\\DepartmentService.cs",
+              "RelativeToolTip": "Service\\Services\\DepartmentService.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAA3wD0AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T18:46:20.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "CompanyApp_MiniProject_18.02.2025\\Controllers\\DepartmentController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\CompanyApp_MiniProject_18.02.2025\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "CompanyApp_MiniProject_18.02.2025\\Controllers\\DepartmentController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwC0AAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T18:47:31.842Z"
             }
           ]
         }

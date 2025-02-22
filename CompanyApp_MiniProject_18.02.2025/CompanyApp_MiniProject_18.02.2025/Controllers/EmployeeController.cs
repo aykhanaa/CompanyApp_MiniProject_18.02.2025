@@ -89,7 +89,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             {
                 goto Address;
             }
-            if (!address.IsCorrectProductNameFormat())
+            if (!address.CheckAddressFormat())
             {
                 Console.WriteLine(ResponseMessages.InvalidNameFormat);
                 goto Address;
@@ -446,7 +446,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
         {
 
             var emplCount = await _employeeService.GetAllEmplCountAsync();
-            Console.WriteLine("All employees count:" + emplCount);
+            Console.WriteLine("All employees count:" +" " + emplCount);
         }
 
     }

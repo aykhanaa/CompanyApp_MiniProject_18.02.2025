@@ -11,6 +11,6 @@ namespace Service.Services.Interfaces
     {
         Task<IEnumerable<User>> GetAllAsync();
         Task RegisterAsync(User user);
-        Task<bool> LoginAsync(string usernameOrEmail, string password);
+        Task<bool> LoginAsync(string email, string password);
     }
 }
