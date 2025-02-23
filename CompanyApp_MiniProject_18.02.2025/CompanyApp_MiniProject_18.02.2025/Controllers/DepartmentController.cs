@@ -38,14 +38,16 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
                 if (string.IsNullOrEmpty(name))
                 {
+                    Console.WriteLine(ResponseMessages.InputRequired);
                     goto Name;
-                }
 
-                if (!name.CheckStrFormat())
+                }
+                if (!name.CheckNameFormat())
                 {
                     Console.WriteLine(ResponseMessages.InvalidNameFormat);
                     goto Name;
                 }
+
 
                 if (allDepartment.Any(m => m.Name.Trim().ToLower() == name.Trim().ToLower()))
                 {
@@ -58,7 +60,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
                 if (string.IsNullOrWhiteSpace(capacityStr))
                 {
-                    Console.WriteLine("Capacity is required");
+                    Console.WriteLine(ResponseMessages.InputRequired);
                     goto Capacity;
                 }
 
@@ -199,26 +201,29 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                     Console.WriteLine(ResponseMessages.DataNotFound);
                     goto Id;
                 }
-                Console.WriteLine("Enter name :");
-            UpdatedName: string updatedName = Console.ReadLine().Trim();
+            UpdatedName: Console.WriteLine("Enter name :");
+             string updatedName = Console.ReadLine().Trim();
+                if (!string.IsNullOrEmpty(updatedName))
+                {
+                    if (!updatedName.CheckNameFormatAllowSpace())
+                    {
+                        Console.WriteLine(ResponseMessages.InvalidNameFormat);
+                        goto UpdatedName;
+                    }
 
+                }
                 if (allDepartment.Any(m => m.Name.ToLower() == updatedName.ToLower()))
                 {
                     Console.WriteLine("Departament with this name already exists");
                     goto UpdatedName;
                 }
-                if (!updatedName.CheckNameFormatAllowSpace())
-                {
-                    Console.WriteLine(ResponseMessages.InvalidNameFormat);
-                    goto UpdatedName;
-                }
 
-                Console.WriteLine("Enter capacity :");
-            Capacity: string updatedCapacityStr = Console.ReadLine();
+            Capacity: Console.WriteLine("Enter capacity :");
+             string updatedCapacityStr = Console.ReadLine();
 
                 int updatedCapacity = 0;
 
-                if (!string.IsNullOrWhiteSpace(updatedCapacityStr))
+                if (!string.IsNullOrEmpty(updatedCapacityStr))
                 {
                     if (!int.TryParse(updatedCapacityStr, out updatedCapacity))
                     {

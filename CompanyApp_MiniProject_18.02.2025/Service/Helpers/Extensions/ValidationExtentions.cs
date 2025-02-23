@@ -44,12 +44,12 @@ namespace Service.Helpers.Extensions
 
         public static bool CheckNameFormatAllowSpace(this string name)
         {
-            return Regex.IsMatch(name, @"^[\p{L}]+(?:\s+[\p{L}]+)*$");
+            return Regex.IsMatch(name, @"^[A-Za-z\s]+$");
         }
 
         public static bool CheckStrFormat(this string name)
         {
-            return Regex.IsMatch(name, @"^[\p{L}]+(?:\s+[\p{L}]+)*$");
+            return Regex.IsMatch(name, @" ^ [\p{L}]+(?:\s+[\p{L}]+)*$");
         }
 
 

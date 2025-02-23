@@ -7,11 +7,37 @@ EmployeeController employeeController = new EmployeeController();
 UserController userController = new UserController();
 
 
-await userController.GetAllAsync();
-Console.WriteLine("-------------------------");
-await userController.RegisterAsync();
-Console.WriteLine("-------------------------");
-await userController.LoginAsync();
+//while (!userController.IsLoggedIn)
+//{
+
+//Operation: Console.WriteLine("1. Log in\n2. Register");
+
+//    string operationStr = Console.ReadLine();
+//    int operation;
+//    bool isCorrectOperationFormat = int.TryParse(operationStr, out operation);
+//    if (isCorrectOperationFormat)
+//    {
+//        switch (operation)
+//        {
+//            case 1:
+
+//                await userController.LoginAsync();
+//                break;
+
+//            case 2:
+//                await userController.RegisterAsync();
+//                break;
+//            default:
+//                Console.WriteLine("Operation is wrong, please try again");
+//                goto Operation;
+//        }
+//    }
+//    else
+//    {
+//        Console.WriteLine("Operation format is wrong, try again:");
+//        goto Operation;
+//    }
+//}
 
 
 
@@ -20,7 +46,7 @@ await userController.LoginAsync();
 while (true)
 {
     Console.WriteLine("1- Department.Create,  2- Department.GetAll,  3- Department.Delete,  4- Department.GetByIdAsync,  5- Department.Update,  6- Department.Search" +
-                      ",  7-Employee.GetAll,  8-Employee.Create,   9-Employee.Delete,  10-Emplyee.GetById, 11-SearchEmpByNameOrSurname, 12-Employee.Update " +
+                      ",  7-Employee.GetAll,  8-Employee.Create,   9-Employee.Delete,  10-Emplyee.GetById, 11-SearchEmpByNameOrSurname, 12-Employee.Update, " +
                       "13-Employee.GetEmplByAgeAsync , 14- Employee.GetEmplByDepIdAsync , 15- Employee.GetAllEmplByDepNameAsync , 16- Employee.GetAllEmplCountAsync");
 x: string optionStr = Console.ReadLine();
 

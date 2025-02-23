@@ -5,6 +5,7 @@ using Service.Helpers.Extensions;
 using Service.Services;
 using Service.Services.Interfaces;
 using System;
+using System.Threading.Channels;
 
 
 namespace CompanyApp_MiniProject_18._02._2025.Controllers
@@ -38,6 +39,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
             if (string.IsNullOrEmpty(name))
             {
+                Console.WriteLine(ResponseMessages.InputRequired);
                 goto Name;
             }
             if (!name.CheckNameFormat())
@@ -51,6 +53,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
             if (string.IsNullOrEmpty(surname))
             {
+                Console.WriteLine(ResponseMessages.InputRequired);
                 goto Surname;
             }
             if (!surname.CheckNameFormat())
@@ -59,12 +62,12 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                 goto Surname;
             }
 
-            Console.WriteLine("Enter age:");
-        Age: string ageStr = Console.ReadLine();
+          Age:Console.WriteLine("Enter age:");
+        string ageStr = Console.ReadLine();
 
             if (string.IsNullOrWhiteSpace(ageStr))
             {
-                Console.WriteLine("Age is required");
+                Console.WriteLine(ResponseMessages.InputRequired);
                 goto Age;
             }
 
@@ -76,7 +79,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                 goto Age;
             }
 
-            if (!(age > 18 && age < 65))
+            if (!(age >= 18 && age < 65))
             {
                 Console.WriteLine(ResponseMessages.InvalidAgeFormat);
                 goto Age;
@@ -87,24 +90,23 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
             if (string.IsNullOrEmpty(address))
             {
+                Console.WriteLine(ResponseMessages.InputRequired);
                 goto Address;
             }
             if (!address.CheckAddressFormat())
             {
-                Console.WriteLine(ResponseMessages.InvalidNameFormat);
+                Console.WriteLine(ResponseMessages.InvalidAddressFormat);
                 goto Address;
             }
 
             Console.WriteLine("Departments:");
-            var allDepartment = await _departmentService.GetAllAsync();
 
-
-            Console.WriteLine("Enter id of the department you want to add employee:");
-        EducationId: string departmentIdStr = Console.ReadLine();
+        EducationId: Console.WriteLine("Enter id of the department you want to add employee:");
+         string departmentIdStr = Console.ReadLine();
 
             if (string.IsNullOrWhiteSpace(departmentIdStr))
             {
-                Console.WriteLine("Department id is required");
+                Console.WriteLine(ResponseMessages.InputRequired);
                 goto EducationId;
             }
 
@@ -122,7 +124,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                 goto EducationId;
             }
 
-            if (allDepartment.All(m => m.Id != departmentId))
+            if (allDepartments.All(m => m.Id != departmentId))
             {
                 Console.WriteLine("There is no department with specified id. Please try again:");
                 goto EducationId;
@@ -152,6 +154,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
             if (string.IsNullOrWhiteSpace(idStr))
             {
+                Console.WriteLine(ResponseMessages.InputRequired);
                 goto Id;
             }
 
@@ -239,6 +242,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             string idStr = Console.ReadLine();
             if (string.IsNullOrWhiteSpace(idStr))
             {
+                Console.WriteLine(ResponseMessages.InputRequired);
                 goto Id;
             }
             int id;
@@ -264,32 +268,40 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             EditedName: Console.WriteLine("Add name");
             string editedName = Console.ReadLine();
 
+            if (!string.IsNullOrEmpty(editedName))
+            {
+                if (!editedName.CheckNameFormatAllowSpace())
+                {
+                    Console.WriteLine(ResponseMessages.InvalidNameFormat);
+                    goto EditedName;
+                }
+            }
+            
             if (allEmployee.Any(m => m.Name.ToLower() == editedName.ToLower()))
             {
                 Console.WriteLine("Employee name is already exists");
                 goto EditedName;
             }
-            if (!editedName.CheckNameFormatAllowSpace())
-            {
-                Console.WriteLine(ResponseMessages.InvalidNameFormat);
-                goto EditedName;
-            }
+            
 
 
         EditedSurname: Console.WriteLine("Add surname");
             string editedsurname = Console.ReadLine();
-
+            if(!string.IsNullOrEmpty(editedsurname))
+            {
+                if (!editedsurname.CheckNameFormatAllowSpace())
+                {
+                    Console.WriteLine(ResponseMessages.InvalidNameFormat);
+                    goto EditedName;
+                }
+            }
             if (allEmployee.Any(m => m.Name.Trim().ToLower() == editedsurname.Trim().ToLower()))
             {
                 Console.WriteLine("Employee surname is already exists");
                 goto EditedSurname;
             }
 
-            if (!editedsurname.CheckNameFormatAllowSpace())
-            {
-                Console.WriteLine(ResponseMessages.InvalidNameFormat);
-                goto EditedName;
-            }
+
 
 
         EditedAge: Console.WriteLine("Add age:");
@@ -314,6 +326,14 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
         EditedAddress: Console.WriteLine("Add address");
             string editaddress = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(editaddress))
+            {
+                if (!editaddress.CheckNameFormatAllowSpace())
+                {
+                    Console.WriteLine(ResponseMessages.InvalidNameFormat);
+                    goto EditedName;
+                }
+            }
 
             if (allEmployee.Any(m => m.Address.Trim().ToLower() == editaddress.Trim().ToLower()))
             {
@@ -321,11 +341,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                 goto EditedAddress;
             }
 
-            if (!editaddress.CheckNameFormatAllowSpace())
-            {
-                Console.WriteLine(ResponseMessages.InvalidNameFormat);
-                goto EditedName;
-            }
+
 
             Console.WriteLine("Department:");
 
@@ -374,48 +390,60 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
         {
         Age: Console.WriteLine("Enter age");
             string ageStr = Console.ReadLine();
-            int age;
+
+                int age;
             if (!int.TryParse(ageStr, out age))
+            {
+                Console.WriteLine(ResponseMessages.InputRequired);
+                goto Age;
+            }
+
+            if (!(age >= 18 && age < 65))
             {
                 Console.WriteLine(ResponseMessages.InvalidAgeFormat);
                 goto Age;
             }
+
+
             try
             {
                 var empAge = await _employeeService.GetEmplByAgeAsync(age);
                 foreach (var item in empAge)
                 {
-                    Console.WriteLine($"Name & Surname::{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
+                    Console.WriteLine($"Name & Surname:{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                goto Age;
 
             }
         }
         public async Task GetEmplByDepIdAsync()
         {
-            Console.WriteLine("Add department id");
+            DepId: Console.WriteLine("Add department id");
             string depIdStr = Console.ReadLine();
-            int depId;
 
+            int depId;
             if (!int.TryParse(depIdStr, out depId))
             {
-                Console.WriteLine(ResponseMessages.InvalidIdFormat);
+                Console.WriteLine(ResponseMessages.InputRequired);
+                goto DepId;
             }
             try
             {
                 var empId = await _employeeService.GetEmplByDepIdAsync(depId);
                 foreach (var item in empId)
                 {
-                    Console.WriteLine($"Name & Surname::{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
+                    Console.WriteLine($"Name & Surname:{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
                 }
             }
             catch (Exception ex)
             {
 
                 Console.WriteLine(ex.Message);
+                goto DepId;
             }
 
         }
@@ -428,6 +456,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                 Console.WriteLine(ResponseMessages.InvalidNameFormat);
                 goto Name;
             }
+
             try
             {
                 var result = await _employeeService.GetAllEmplByDepNameAsync(depName);
@@ -440,6 +469,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             {
 
                 Console.WriteLine(ex.Message);
+                goto Name;
             }
         }
         public async Task GetAllEmplCountAsync()

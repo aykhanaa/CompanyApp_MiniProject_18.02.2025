@@ -43,7 +43,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             UserFullName: Console.WriteLine("Add user Fullname:");
                 string userFullName = Console.ReadLine().Trim();
 
-                if (string.IsNullOrEmpty(userFullName))
+                if (string.IsNullOrWhiteSpace(userFullName))
                 {
                     Console.WriteLine(ResponseMessages.InputRequired);
                     goto UserFullName;
@@ -57,7 +57,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             UserEmail: Console.WriteLine("Add user Email");
                 string userEmail = Console.ReadLine();
 
-                if (string.IsNullOrEmpty(userEmail))
+                if (string.IsNullOrWhiteSpace(userEmail))
                 {
                     goto UserEmail;
                 }
@@ -75,8 +75,9 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             UserPassword: Console.WriteLine("Add user password");
                 string userPassword = Console.ReadLine();
 
-                if (string.IsNullOrEmpty(userPassword))
+                if (string.IsNullOrWhiteSpace(userPassword))
                 {
+                    Console.WriteLine(ResponseMessages.InputRequired);
                     goto UserPassword;
                 }
                 if (!userPassword.CheckPasswordFormat())
@@ -134,6 +135,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
         Password: Console.WriteLine("Enter password");
             string password = Console.ReadLine().Trim();
+            
             if (string.IsNullOrEmpty(password))
             {
                 Console.WriteLine(ResponseMessages.InputRequired);

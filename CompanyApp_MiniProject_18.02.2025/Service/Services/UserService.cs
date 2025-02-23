@@ -26,8 +26,7 @@ namespace Service.Services
         public async Task<bool> LoginAsync(string email, string password)
         {
             var datas = await _userRepo.GetAllAsync();
-
-            return datas.Any(m=>(m.Email.ToLower() == email.ToLower() && m.Password.ToLower() == password));
+            return datas.Any(m => m.Email.ToLower() == email.ToLower() && m.Password.ToLower() == password.ToLower());
         }
 
         public async Task RegisterAsync(User user)
