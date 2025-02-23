@@ -1,45 +1,44 @@
 ﻿
 using Azure;
 using CompanyApp_MiniProject_18._02._2025.Controllers;
+using Service.Helpers.Enums;
 
 DepartmentController departmentController = new DepartmentController();
 EmployeeController employeeController = new EmployeeController();  
 UserController userController = new UserController();
 
 
-//while (!userController.IsLoggedIn)
-//{
+while (!userController.IsLoggedIn)
+{
 
-//Operation: Console.WriteLine("1. Log in\n2. Register");
+Operation: Console.WriteLine("1. Log in\n2. Register");
 
-//    string operationStr = Console.ReadLine();
-//    int operation;
-//    bool isCorrectOperationFormat = int.TryParse(operationStr, out operation);
-//    if (isCorrectOperationFormat)
-//    {
-//        switch (operation)
-//        {
-//            case 1:
+    string operationStr = Console.ReadLine();
+    int operation;
+    bool isCorrectOperationFormat = int.TryParse(operationStr, out operation);
+    if (isCorrectOperationFormat)
+    {
+        switch (operation)
+        {
+            case 1:
 
-//                await userController.LoginAsync();
-//                break;
+                await userController.LoginAsync();
+                break;
 
-//            case 2:
-//                await userController.RegisterAsync();
-//                break;
-//            default:
-//                Console.WriteLine("Operation is wrong, please try again");
-//                goto Operation;
-//        }
-//    }
-//    else
-//    {
-//        Console.WriteLine("Operation format is wrong, try again:");
-//        goto Operation;
-//    }
-//}
-
-
+            case 2:
+                await userController.RegisterAsync();
+                break;
+            default:
+                Console.WriteLine("Operation is wrong, please try again");
+                goto Operation;
+        }
+    }
+    else
+    {
+        Console.WriteLine("Operation format is wrong, try again:");
+        goto Operation;
+    }
+}
 
 
 
@@ -55,52 +54,52 @@ x: string optionStr = Console.ReadLine();
     {
         switch (option)
         {
-            case 1:
+            case (int)OperationType.CreateDepartment:
                 await departmentController.CreateAsync();
                 break;
-            case 2:
+            case (int)OperationType.GetAllDepartment:
                 await departmentController.GetAllAsync();
                 break;
-            case 3:
+            case (int)OperationType.DeleteDepartment:
                 await departmentController.DeleteAsync();
                 break;
-            case 4:
+            case (int)OperationType.GetByIdDepartment:
                 await departmentController.GetByIdAsync();
                 break;
-            case 5:
+            case (int)OperationType.UpdateDepartment:
                 await departmentController.UpdateAsync();
                 break;
-            case 6:
+            case (int)OperationType.SearchAsyncDepartment:
                 await departmentController.SearchAsync();
                 break;
-            case 7:
+            case (int)OperationType.GetAllEmployee:
                 await employeeController.GetAllAsync();
                 break;
-            case 8:
+            case (int)OperationType.CreateEmployee:
                 await employeeController.CreateAsync();
                 break;
-            case 9:
+            case (int)OperationType.DeleteEmployee:
                 await employeeController.DeleteAsync();
                 break;
-            case 10:
+            case (int)OperationType.GetByIdEmployee:
                 await employeeController.GetByIdAsync();
                 break;
-            case 11:
+            case (int)OperationType.SearchEmpByNameOrSurname:
                 await employeeController.SearchEmpByNameOrSurnameAsync();
                 break;
-            case 12:
+            case (int)OperationType.UpdateEmployee:
                 await employeeController.UpdateAsync();
                 break;
-            case 13:
+            case (int)OperationType.GetEmplByAge:
                 await employeeController.GetEmplByAgeAsync();
                 break;
-            case 14:
+            case (int)OperationType.GetEmplByDepId:
                 await employeeController.GetEmplByDepIdAsync();
                 break;
-            case 15:
+            case (int)OperationType.GetAllEmplByDepName:
                 await employeeController.GetAllEmplByDepNameAsync();
                 break;
-            case 16:
+            case (int)OperationType.GetAllEmplCount:
                 await employeeController.GetAllEmplCountAsync();
                 break;
 

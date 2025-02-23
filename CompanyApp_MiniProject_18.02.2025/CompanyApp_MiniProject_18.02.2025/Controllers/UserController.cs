@@ -59,6 +59,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
                 if (string.IsNullOrWhiteSpace(userEmail))
                 {
+                    Console.WriteLine(ResponseMessages.InputRequired);
                     goto UserEmail;
                 }
                 if (!userEmail.CheckEmailFormat())
@@ -157,7 +158,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                 else
                 {
                     Console.WriteLine(ResponseMessages.LoginFailed);
-                    goto Email;
+                    
                 }
             }
             catch (Exception ex)

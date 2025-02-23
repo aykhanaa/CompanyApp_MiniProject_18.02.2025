@@ -55,8 +55,8 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                     goto Name;
                 }
 
-                Console.WriteLine("Enter department  capacity:");
-            Capacity: string capacityStr = Console.ReadLine();
+            Capacity: Console.WriteLine("Enter department  capacity:");
+             string capacityStr = Console.ReadLine();
 
                 if (string.IsNullOrWhiteSpace(capacityStr))
                 {
@@ -136,7 +136,14 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                 var allDepartment = await _departmentService.GetAllAsync();
             Id: Console.WriteLine("Add departament id:");
                 string idstr = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(idstr))
+                {
+                    Console.WriteLine(ResponseMessages.InputRequired);
+                    goto Id;
+                }
                 int id;
+
                 if (!int.TryParse(idstr, out id))
                 {
                     Console.WriteLine(ValidationMessages.OnlyNumberFormat);
@@ -179,6 +186,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
                 if (string.IsNullOrWhiteSpace(idStr))
                 {
+                    Console.WriteLine(ResponseMessages.InputRequired);
                     goto Id;
                 }
 

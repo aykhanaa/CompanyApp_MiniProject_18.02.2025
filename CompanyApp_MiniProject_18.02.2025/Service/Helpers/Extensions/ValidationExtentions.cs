@@ -25,32 +25,17 @@ namespace Service.Helpers.Extensions
         {
             return Regex.IsMatch(name, @"^(?=.*\d).{3,}$");
         }
-        public static bool IsCorrectProductNameFormat(this string name)
-        {
-            return Regex.IsMatch(name, @"^[a-zA-Z0-9\s]+$");
-        }
-
-        public static bool OnlyNumberFormat(this string number)
-        {
-            return Regex.IsMatch(number, @"^\d+$");
-        }
 
         public static bool CheckAddressFormat(this string name)
         {
             return Regex.IsMatch(name, @"^[a-zA-Z\s]+[0-9]*$");
         }
 
-
-
         public static bool CheckNameFormatAllowSpace(this string name)
         {
             return Regex.IsMatch(name, @"^[A-Za-z\s]+$");
         }
 
-        public static bool CheckStrFormat(this string name)
-        {
-            return Regex.IsMatch(name, @" ^ [\p{L}]+(?:\s+[\p{L}]+)*$");
-        }
 
 
     }

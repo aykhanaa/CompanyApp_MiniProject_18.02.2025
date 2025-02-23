@@ -194,10 +194,11 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
         {
             Id:  Console.WriteLine("Add employee id");
             string employeeidStr = Console.ReadLine();
+
             int employeeid;
             if (!int.TryParse(employeeidStr, out employeeid))
             {
-                Console.WriteLine(ResponseMessages.InvalidIdFormat);
+                Console.WriteLine(ResponseMessages.InvalidFormat);
                 goto Id;
             }
 
@@ -216,7 +217,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
         public async Task SearchEmpByNameOrSurnameAsync()
         {
 
-            Search:  Console.WriteLine("Add search text");
+        Surname:  Console.WriteLine("Add search text");
             string serachText = Console.ReadLine();
             try
             {
@@ -224,13 +225,14 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
                 foreach (var item in result)
                 {
-                    Console.WriteLine($"Id:{item.Id},Name:{item.Name},Surname:{item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId},CreatedDate:{item.CreatedDate.ToString("MM/dd/yyyy")}");
+                    Console.WriteLine($"Id:{item.Id},Name & Surname:{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId},CreatedDate:{item.CreatedDate.ToString("MM/dd/yyyy")}");
                 }
             }
             catch (Exception ex)
             {
 
                 Console.WriteLine(ex.Message);
+                goto Surname;
             }
         }
         public async Task UpdateAsync()
@@ -292,7 +294,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                 if (!editedsurname.CheckNameFormatAllowSpace())
                 {
                     Console.WriteLine(ResponseMessages.InvalidNameFormat);
-                    goto EditedName;
+                    goto EditedSurname;
                 }
             }
             if (allEmployee.Any(m => m.Name.Trim().ToLower() == editedsurname.Trim().ToLower()))
@@ -391,10 +393,10 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
         Age: Console.WriteLine("Enter age");
             string ageStr = Console.ReadLine();
 
-                int age;
+             int age;
             if (!int.TryParse(ageStr, out age))
             {
-                Console.WriteLine(ResponseMessages.InputRequired);
+                Console.WriteLine(ResponseMessages.InvalidFormat);
                 goto Age;
             }
 
@@ -428,7 +430,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             int depId;
             if (!int.TryParse(depIdStr, out depId))
             {
-                Console.WriteLine(ResponseMessages.InputRequired);
+                Console.WriteLine(ResponseMessages.InvalidFormat);
                 goto DepId;
             }
             try
@@ -451,6 +453,11 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
         {
         Name: Console.WriteLine("Add department name");
             string depName = Console.ReadLine();
+            if (string.IsNullOrEmpty(depName))
+            {
+                Console.WriteLine(ResponseMessages.InputRequired);
+                goto Name;
+            }
             if (!depName.CheckNameFormat())
             {
                 Console.WriteLine(ResponseMessages.InvalidNameFormat);

@@ -11,6 +11,7 @@ namespace Service.Helpers.Constants
         public const string DataNotFound = "Data not found";
         public const string InputRequired = "Input required";
         public const string IncorrectFormat = "This format is wrong";
+        public const string InvalidFormat = "Format is wrong";
         public const string InvalidIdFormat = "Id format is wrong";
         public const string InvalidNameFormat = "Name format is wrong";
         public const string InvalidAgeFormat = "Employees must be between the ages of 18 and 65.";
