@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Service.Helpers.Enums
 {
@@ -14,8 +10,8 @@ namespace Service.Helpers.Enums
         GetByIdDepartment,
         UpdateDepartment,
         SearchAsyncDepartment,
-        GetAllEmployee,
         CreateEmployee,
+        GetAllEmployee,
         DeleteEmployee,
         GetByIdEmployee,
         SearchEmpByNameOrSurname,

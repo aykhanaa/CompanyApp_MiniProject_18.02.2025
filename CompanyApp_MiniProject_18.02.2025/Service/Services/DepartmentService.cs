@@ -1,18 +1,11 @@
 ﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
 using Repository.Repositories;
 using Repository.Repositories.Interfaces;
 using Service.Helpers.Constants;
 using Service.Helpers.Exceptions;
 using Service.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace Service.Services
 {

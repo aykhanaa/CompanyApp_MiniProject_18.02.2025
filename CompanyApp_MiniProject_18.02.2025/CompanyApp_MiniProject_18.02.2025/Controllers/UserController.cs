@@ -1,16 +1,10 @@
 ﻿using Domain.Entities;
-using Repository.Repositories.Interfaces;
 using Service.Helpers.Constants;
 using Service.Helpers.Extensions;
 using Service.Services;
 using Service.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Channels;
-using System.Threading.Tasks;
+
 
 namespace CompanyApp_MiniProject_18._02._2025.Controllers
 {
@@ -118,35 +112,12 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
         public async Task LoginAsync()
         {
-            Email: Console.WriteLine("Enter email");
+             Console.WriteLine("Enter email");
             string email = Console.ReadLine().Trim();
 
-            if (string.IsNullOrEmpty(email))
-            {
-                Console.WriteLine(ResponseMessages.InputRequired);
-                goto Email;
-            }
-            if (!email.CheckEmailFormat())
-            {
-                Console.WriteLine(ResponseMessages.InvalidEmailFormat);
-                goto Email;
-            }
-
-
-
-        Password: Console.WriteLine("Enter password");
+         Console.WriteLine("Enter password");
             string password = Console.ReadLine().Trim();
             
-            if (string.IsNullOrEmpty(password))
-            {
-                Console.WriteLine(ResponseMessages.InputRequired);
-                goto Password;
-            }
-            if (!password.CheckPasswordFormat())
-            {
-                Console.WriteLine(ResponseMessages.IncorrectFormat);
-                goto Password;
-            }
             try
             {
                 var checkLogin = await _userService.LoginAsync(email, password);

@@ -231,7 +231,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
                 int updatedCapacity = 0;
 
-                if (!string.IsNullOrEmpty(updatedCapacityStr))
+                if (!string.IsNullOrWhiteSpace(updatedCapacityStr))
                 {
                     if (!int.TryParse(updatedCapacityStr, out updatedCapacity))
                     {
@@ -242,6 +242,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                     if (updatedCapacity < 1)
                     {
                         Console.WriteLine(ResponseMessages.InvalidCapacityFormat);
+                        goto Capacity;
                     }
                 }
                 await _departmentService.UpdateAsync(id, new Department { Name = updatedName, Capacity = updatedCapacity });

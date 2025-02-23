@@ -1,5 +1,4 @@
 ﻿
-using Azure;
 using CompanyApp_MiniProject_18._02._2025.Controllers;
 using Service.Helpers.Enums;
 
@@ -7,9 +6,9 @@ DepartmentController departmentController = new DepartmentController();
 EmployeeController employeeController = new EmployeeController();  
 UserController userController = new UserController();
 
-
 while (!userController.IsLoggedIn)
 {
+    userController.GetAllAsync();
 
 Operation: Console.WriteLine("1. Log in\n2. Register");
 
@@ -45,7 +44,7 @@ Operation: Console.WriteLine("1. Log in\n2. Register");
 while (true)
 {
     Console.WriteLine("1- Department.Create,  2- Department.GetAll,  3- Department.Delete,  4- Department.GetByIdAsync,  5- Department.Update,  6- Department.Search" +
-                      ",  7-Employee.GetAll,  8-Employee.Create,   9-Employee.Delete,  10-Emplyee.GetById, 11-SearchEmpByNameOrSurname, 12-Employee.Update, " +
+                      ",  7-Employee.Create,  8-Employee.GetAll,   9-Employee.Delete,  10-Emplyee.GetById, 11-SearchEmpByNameOrSurname, 12-Employee.Update, " +
                       "13-Employee.GetEmplByAgeAsync , 14- Employee.GetEmplByDepIdAsync , 15- Employee.GetAllEmplByDepNameAsync , 16- Employee.GetAllEmplCountAsync");
 x: string optionStr = Console.ReadLine();
 
@@ -72,11 +71,11 @@ x: string optionStr = Console.ReadLine();
             case (int)OperationType.SearchAsyncDepartment:
                 await departmentController.SearchAsync();
                 break;
-            case (int)OperationType.GetAllEmployee:
-                await employeeController.GetAllAsync();
-                break;
             case (int)OperationType.CreateEmployee:
                 await employeeController.CreateAsync();
+                break;
+            case (int)OperationType.GetAllEmployee:
+                await employeeController.GetAllAsync();
                 break;
             case (int)OperationType.DeleteEmployee:
                 await employeeController.DeleteAsync();

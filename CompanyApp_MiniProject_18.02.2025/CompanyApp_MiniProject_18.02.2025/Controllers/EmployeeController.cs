@@ -1,11 +1,9 @@
 ﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore.Query;
 using Service.Helpers.Constants;
 using Service.Helpers.Extensions;
 using Service.Services;
 using Service.Services.Interfaces;
-using System;
-using System.Threading.Channels;
+
 
 
 namespace CompanyApp_MiniProject_18._02._2025.Controllers
@@ -26,7 +24,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             var allEmployees = await _employeeService.GetAllAsync();
             foreach (var item in allEmployees)
             {
-                Console.WriteLine($"Id:{item.Id},Name & Surname:{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},CreatedDate:{item.CreatedDate.ToString("MM/dd/yyyy")},DepartmentId:{item.DepartmentId}");
+                Console.WriteLine($"Id:{item.Id}, Name:{item.Name}, Surname:{item.Surname},Age:{item.Age},Address:{item.Address},CreatedDate:{item.CreatedDate.ToString("MM/dd/yyyy")},DepartmentId:{item.DepartmentId}");
             }
         }
         public async Task CreateAsync()
@@ -205,7 +203,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
             try
             {
                 var result = await _employeeService.GetByIdAsync(employeeid);
-                Console.WriteLine($"Id:{result.Id},Name & Surname:{result.Name} {result.Surname},Age:{result.Age},Address:{result.Address},DepartmentId:{result.DepartmentId},CreatedDate:{result.CreatedDate.ToString("MM/dd/yyyy")}");
+                Console.WriteLine($"Id:{result.Id},Name:{result.Name} , Surname:{result.Surname},Age:{result.Age},Address:{result.Address},DepartmentId:{result.DepartmentId}");
             }
             catch (Exception ex)
             {
@@ -225,7 +223,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
 
                 foreach (var item in result)
                 {
-                    Console.WriteLine($"Id:{item.Id},Name & Surname:{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId},CreatedDate:{item.CreatedDate.ToString("MM/dd/yyyy")}");
+                    Console.WriteLine($"Id:{item.Id},Name:{item.Name}, Surname:{item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
                 }
             }
             catch (Exception ex)
@@ -412,7 +410,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                 var empAge = await _employeeService.GetEmplByAgeAsync(age);
                 foreach (var item in empAge)
                 {
-                    Console.WriteLine($"Name & Surname:{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
+                    Console.WriteLine($"Name:{item.Name}, Surname: {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
                 }
             }
             catch (Exception ex)
@@ -438,7 +436,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                 var empId = await _employeeService.GetEmplByDepIdAsync(depId);
                 foreach (var item in empId)
                 {
-                    Console.WriteLine($"Name & Surname:{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
+                    Console.WriteLine($"Name:{item.Name} ,Surname:{item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
                 }
             }
             catch (Exception ex)
@@ -469,7 +467,7 @@ namespace CompanyApp_MiniProject_18._02._2025.Controllers
                 var result = await _employeeService.GetAllEmplByDepNameAsync(depName);
                 foreach (var item in result)
                 {
-                    Console.WriteLine($"Name & Surname:{item.Name} {item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
+                    Console.WriteLine($"Name :{item.Name} , Surname:{item.Surname},Age:{item.Age},Address:{item.Address},DepartmentId:{item.DepartmentId}");
                 }
             }
             catch (Exception ex)
